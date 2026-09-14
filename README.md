@@ -9,3 +9,5 @@ Public, read-only dashboard. AWS data is collected by the private `lab-cloud-cos
 - Azure is not connected yet.
 
 Local preview: `python3 -m http.server 8000`.
+
+Automation remains disabled until the private collector's Secrets and CUR export are configured. The initial snapshot contains actual observed inventory; no example cost data is published.
