@@ -1,0 +1,19 @@
+{
+  "cost_basis": "UnblendedCost: CUR 청구월 기준, 세금·크레딧 포함. 파트너 최종 청구액과 다를 수 있음.",
+  "errors": [
+    {
+      "error": "CUR_NOT_CONFIGURED",
+      "scope": "cost"
+    }
+  ],
+  "generated_at": "2026-09-14T04:15:52.098280+00:00",
+  "history_note": "CloudTrail API 요청 기록과 관측 상태. 실제 상태 전환 시각·전체 과거 이력을 보장하지 않음.",
+  "instances": [],
+  "months": [],
+  "platforms": {
+    "AWS": "connected",
+    "Azure": "not_connected"
+  },
+  "schema_version": 1,
+  "title": "연구실 클라우드 비용"
+}
