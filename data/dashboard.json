@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T05:07:10.367370+00:00",
+  "generated_at": "2026-09-14T05:25:22.391564+00:00",
   "providers": {
     "aws": {
       "cost_basis": "UnblendedCost: CUR 청구월 기준, 세금·크레딧 포함. 파트너 최종 청구액과 다를 수 있음.",
@@ -23,16 +23,10 @@
       "title": "연구실 클라우드 비용"
     },
     "gpu-first": {
-      "cost_basis": "GPU First 사용량 CSV · CREDIT 단위 · USD/KRW로 환산하지 않음. 공개 합계는 지정 사용자만 포함.",
-      "cost_status": "permission_required",
-      "errors": [
-        {
-          "error": "HTTP_403",
-          "scope": "gpu-first/cost"
-        }
-      ],
-      "generated_at": "2026-09-14T05:07:10.367370+00:00",
-      "history_note": "조회 가능한 프로젝트의 run 이력. running 상태 구간만 사용 시간에 포함하며 청구 시간과 다를 수 있음.",
+      "cost_enabled": false,
+      "errors": [],
+      "generated_at": "2026-09-14T05:25:22.391564+00:00",
+      "history_note": "등록된 사용자의 VESSL run 이력. running 상태 시간만 합산하며 대기 시간은 제외합니다.",
       "instances": [
         {
           "cluster": "snu-eng-dgx",
@@ -78,7 +72,7 @@
           "gpu_count": 2,
           "gpu_type": "NVIDIA-A100-SXM4-40GB",
           "id": "369367259595",
-          "last_seen": "2026-09-14T05:07:10.367370+00:00",
+          "last_seen": "2026-09-14T05:25:22.391564+00:00",
           "name": "informal-shopping-run",
           "owner": "jhkim00",
           "project": "prefix-research",
@@ -115,7 +109,7 @@
           "gpu_count": 4,
           "gpu_type": "NVIDIA-A100-SXM4-40GB",
           "id": "369367259906",
-          "last_seen": "2026-09-14T05:07:10.367370+00:00",
+          "last_seen": "2026-09-14T05:25:22.391564+00:00",
           "name": "a100-4-20260910-003156",
           "owner": "jhkim00",
           "project": "prefix-research",
@@ -130,12 +124,13 @@
       "label": "GPU First",
       "months": [],
       "projects_checked": 56,
-      "status": "partial",
+      "sources_configured": 1,
+      "sources_connected": 1,
+      "status": "connected",
       "users_found": [
         "jhkim00"
       ],
       "watched_users": [
-        "jake",
         "jhkim00"
       ]
     }
