@@ -13,3 +13,5 @@ Public, read-only [dashboard](https://quaternior.github.io/lab-cloud-cost-dashbo
 Local preview: `python3 -m http.server 8000`.
 
 Hourly workflow code is prepared in the private collector. Automation is not activated: VESSL/AWS Secrets and a dashboard deploy key still require setup. The site currently uses a manually collected live snapshot; no fixture cost data is published.
+
+Live snapshot checked on 2026-09-14 UTC: two GPU First runs for jhkim00; usage CSV access denied. Display tests cover platform/user/month selection, lifecycle details, separate credit/currency totals and mobile layout.
