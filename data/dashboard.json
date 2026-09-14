@@ -1,19 +1,144 @@
 {
-  "cost_basis": "UnblendedCost: CUR 청구월 기준, 세금·크레딧 포함. 파트너 최종 청구액과 다를 수 있음.",
-  "errors": [
-    {
-      "error": "CUR_NOT_CONFIGURED",
-      "scope": "cost"
+  "generated_at": "2026-09-14T04:54:10.470954+00:00",
+  "providers": {
+    "aws": {
+      "cost_basis": "UnblendedCost: CUR 청구월 기준, 세금·크레딧 포함. 파트너 최종 청구액과 다를 수 있음.",
+      "errors": [
+        {
+          "error": "CUR_NOT_CONFIGURED",
+          "scope": "aws/cost"
+        }
+      ],
+      "generated_at": "2026-09-14T04:15:52.098280+00:00",
+      "history_note": "CloudTrail API 요청 기록과 관측 상태. 실제 상태 전환 시각·전체 과거 이력을 보장하지 않음.",
+      "instances": [],
+      "label": "AWS",
+      "months": [],
+      "platforms": {
+        "AWS": "connected",
+        "Azure": "not_connected"
+      },
+      "schema_version": 1,
+      "title": "연구실 클라우드 비용"
+    },
+    "gpu-first": {
+      "cost_basis": "GPU First 사용량 CSV · CREDIT 단위 · USD/KRW로 환산하지 않음. 공개 합계는 지정 사용자만 포함.",
+      "cost_status": "permission_required",
+      "errors": [
+        {
+          "error": "HTTP_403",
+          "scope": "gpu-first/cost"
+        }
+      ],
+      "generated_at": "2026-09-14T04:44:36.168535+00:00",
+      "history_note": "조회 가능한 프로젝트의 run 이력. running 상태 구간만 사용 시간에 포함하며 청구 시간과 다를 수 있음.",
+      "instances": [
+        {
+          "cluster": "snu-eng-dgx",
+          "created_at": "2026-09-09T00:23:24.309556+00:00",
+          "events": [
+            {
+              "action": "queued",
+              "at": "2026-09-09T00:23:24.312433+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "pending",
+              "at": "2026-09-09T00:23:24.337312+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "initializing",
+              "at": "2026-09-09T02:49:07.586921+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "running",
+              "at": "2026-09-09T02:49:18.768797+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "stopping",
+              "at": "2026-09-09T03:46:13.587495+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "waitToBeKilled",
+              "at": "2026-09-09T03:46:25.206864+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "terminated",
+              "at": "2026-09-09T03:46:26.254478+00:00",
+              "source": "vessl"
+            }
+          ],
+          "first_seen": "2026-09-14T04:44:36.168535+00:00",
+          "gpu_count": 2,
+          "gpu_type": "NVIDIA-A100-SXM4-40GB",
+          "id": "369367259595",
+          "last_seen": "2026-09-14T04:44:36.168535+00:00",
+          "name": "informal-shopping-run",
+          "owner": "jhkim00",
+          "project": "prefix-research",
+          "region": "prefix-research",
+          "runtime_basis": "VESSL running 상태 구간 · 대기 시간 제외 · 청구 시간과 다를 수 있음",
+          "runtime_hours": {
+            "2026-09": 0.952079
+          },
+          "state": "terminated",
+          "state_stale": false,
+          "type": "a100-2"
+        },
+        {
+          "cluster": "snu-eng-dgx",
+          "created_at": "2026-09-10T00:33:20.738860+00:00",
+          "events": [
+            {
+              "action": "queued",
+              "at": "2026-09-10T00:33:20.741559+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "pending",
+              "at": "2026-09-10T00:33:20.763079+00:00",
+              "source": "vessl"
+            },
+            {
+              "action": "terminated",
+              "at": "2026-09-10T01:51:08.250850+00:00",
+              "source": "vessl"
+            }
+          ],
+          "first_seen": "2026-09-14T04:44:36.168535+00:00",
+          "gpu_count": 4,
+          "gpu_type": "NVIDIA-A100-SXM4-40GB",
+          "id": "369367259906",
+          "last_seen": "2026-09-14T04:44:36.168535+00:00",
+          "name": "a100-4-20260910-003156",
+          "owner": "jhkim00",
+          "project": "prefix-research",
+          "region": "prefix-research",
+          "runtime_basis": "VESSL running 상태 구간 · 대기 시간 제외 · 청구 시간과 다를 수 있음",
+          "runtime_hours": {},
+          "state": "terminated",
+          "state_stale": false,
+          "type": "a100-4"
+        }
+      ],
+      "label": "GPU First",
+      "months": [],
+      "projects_checked": 56,
+      "status": "partial",
+      "users_found": [
+        "jhkim00"
+      ],
+      "watched_users": [
+        "jake",
+        "jhkim00"
+      ]
     }
-  ],
-  "generated_at": "2026-09-14T04:15:52.098280+00:00",
-  "history_note": "CloudTrail API 요청 기록과 관측 상태. 실제 상태 전환 시각·전체 과거 이력을 보장하지 않음.",
-  "instances": [],
-  "months": [],
-  "platforms": {
-    "AWS": "connected",
-    "Azure": "not_connected"
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "title": "연구실 클라우드 비용"
 }
