@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>연구실 EC2 사용 보고 · 데모</title><link rel="icon" href="data:,"><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="demo.css"><script src="app.js" defer></script></head>
+<body>
+<div class="demo-banner"><b>DEMO · 보고용 가상 데이터</b><span>비용·사용 시간·실행 상태는 예시이며 실제 AWS 청구·사용 내역이 아닙니다.</span></div>
+<header><div><span class="eyebrow">LAB / COMPUTE REPORT</span><h1>연구실 EC2 사용 보고</h1><p class="header-sub">AWS EC2 · NVIDIA L40S · jhkim00 / jake / dgkim</p></div><span class="demo-pill">G6e ONLY</span></header>
+<main>
+<section class="toolbar"><div><h2>월별 비용과 연구 워크로드</h2><p id="snapshot" class="muted">예시 데이터를 불러오는 중입니다.</p></div><div class="controls"><label>보고 월<select id="month"></select></label><label>사용자<select id="owner"><option value="">연구실 전체</option></select></label><button id="print">인쇄 / PDF 저장</button></div></section>
+<div id="scope" class="scope" role="status"></div>
+<section class="metrics" aria-label="보고 요약">
+<article><span>선택 범위 예시 비용</span><strong id="cost">—</strong><small id="costBasis">가상 단가 × 실행 시간</small></article>
+<article><span>선택 월 실행 시간</span><strong id="hours">—</strong><small>인스턴스별 실행 시간 합계</small></article>
+<article><span>선택 월 GPU 시간</span><strong id="gpuHours">—</strong><small>실행 시간 × L40S 개수</small></article>
+<article><span>스냅샷 실행 중</span><strong id="active">—</strong><small id="activeNote">예시 스냅샷 기준</small></article>
+</section>
+<section class="grid"><article class="panel"><div class="panel-title"><h3>월별 예시 비용</h3><span class="muted">USD · 동일 사용자 범위</span></div><div id="monthly" class="bars"></div></article><article class="panel"><div class="panel-title"><h3>사용자별 예시 비용</h3><button id="reset">전체 보기</button></div><div id="users" class="users"></div><p class="muted">사용자를 선택하면 요약과 실행 목록이 함께 바뀝니다.</p></article></section>
+<section class="panel records"><div class="panel-title"><div><h3>EC2 실행 기록</h3><p id="recordNote" class="muted"></p></div><span class="muted">모든 GPU는 NVIDIA L40S</span></div><div class="filters"><label>스냅샷 상태<select id="status"><option value="">전체 상태</option><option value="running">실행 중</option><option value="stopped">중지</option><option value="terminated">종료</option></select></label><label class="search">검색<input id="search" type="search" placeholder="run 이름, 사용자, 인스턴스 사양"></label></div><div class="table-wrap"><table><thead><tr><th>run / 예시 ID</th><th>사용자</th><th>EC2 · GPU</th><th>스냅샷 상태</th><th>선택 월 시간</th><th>선택 월 예시 비용</th><th>생성일 (UTC)</th></tr></thead><tbody id="runs"></tbody></table></div><p id="count" class="muted"></p></section>
+<details class="notes"><summary>보고 가정과 가상 단가</summary><p>2026-09-17 00:00 UTC 고정 스냅샷. 7·8월은 전체 월, 9월은 1~16일 예시입니다. 현재 시각에 따라 데이터가 바뀌지 않습니다.</p><p>가상 시간당 단가: g6e.2xlarge $2 · g6e.4xlarge $3 · g6e.12xlarge $8. 실제 AWS 가격·견적이 아닙니다. EC2 컴퓨팅만 포함하며 EBS·네트워크·세금·할인 등은 제외했습니다.</p><p>실행 시간은 각 실행 구간을 UTC 월 경계에서 나누어 합산합니다. GPU 시간은 실행 시간 × GPU 개수입니다. 모든 예시 비용은 사용자에게 귀속되므로 미분류 비용은 $0입니다.</p><p>GPU 개수와 vCPU·메모리 사양: <a href="https://aws.amazon.com/ec2/instance-types/g6e/" target="_blank" rel="noopener">AWS 공식 G6e 사양</a>.</p></details>
+</main>
+<dialog id="detail"><button id="close" class="close">닫기 ×</button><h2 id="detailTitle"></h2><p id="detailMeta"></p><div id="timeline"></div></dialog>
+<footer>보고용 가상 예시 · AWS EC2 / L40S · 실제 리소스 생성이나 API 조회 없음 · <a href="../">실제 수집 대시보드</a></footer>
+</body></html>

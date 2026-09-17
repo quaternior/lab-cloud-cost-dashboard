@@ -1,0 +1,229 @@
+{
+  "demo": true,
+  "snapshot_at": "2026-09-17T00:00:00Z",
+  "months": [
+    "2026-09",
+    "2026-08",
+    "2026-07"
+  ],
+  "users": [
+    "jhkim00",
+    "jake",
+    "dgkim"
+  ],
+  "specs": {
+    "g6e.2xlarge": {
+      "gpu": 1,
+      "vcpu": 8,
+      "memory_gib": 64,
+      "rate": 2
+    },
+    "g6e.4xlarge": {
+      "gpu": 1,
+      "vcpu": 16,
+      "memory_gib": 128,
+      "rate": 3
+    },
+    "g6e.12xlarge": {
+      "gpu": 4,
+      "vcpu": 48,
+      "memory_gib": 384,
+      "rate": 8
+    }
+  },
+  "runs": [
+    {
+      "id": "demo-ec2-001",
+      "owner": "jhkim00",
+      "name": "jhkim00-kv-cache-baseline",
+      "type": "g6e.4xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-07-03T08:00:00+00:00",
+      "state": "terminated",
+      "sessions": [
+        {
+          "start": "2026-07-03T08:00:00+00:00",
+          "end": "2026-07-05T08:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-002",
+      "owner": "jhkim00",
+      "name": "jhkim00-prefill-profile",
+      "type": "g6e.4xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-08-03T08:00:00+00:00",
+      "state": "terminated",
+      "sessions": [
+        {
+          "start": "2026-08-03T08:00:00+00:00",
+          "end": "2026-08-06T08:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-003",
+      "owner": "jhkim00",
+      "name": "jhkim00-prefix-ablation",
+      "type": "g6e.4xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-09-03T08:00:00+00:00",
+      "state": "stopped",
+      "sessions": [
+        {
+          "start": "2026-09-03T08:00:00+00:00",
+          "end": "2026-09-04T16:00:00+00:00"
+        },
+        {
+          "start": "2026-09-05T16:00:00+00:00",
+          "end": "2026-09-07T00:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-004",
+      "owner": "jhkim00",
+      "name": "jhkim00-decode-benchmark",
+      "type": "g6e.4xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-09-15T12:00:00+00:00",
+      "state": "running",
+      "sessions": [
+        {
+          "start": "2026-09-15T12:00:00+00:00",
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-005",
+      "owner": "jake",
+      "name": "jake-sft-baseline",
+      "type": "g6e.12xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-07-04T08:00:00+00:00",
+      "state": "terminated",
+      "sessions": [
+        {
+          "start": "2026-07-04T08:00:00+00:00",
+          "end": "2026-07-06T20:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-006",
+      "owner": "jake",
+      "name": "jake-lora-sweep",
+      "type": "g6e.12xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-08-04T08:00:00+00:00",
+      "state": "terminated",
+      "sessions": [
+        {
+          "start": "2026-08-04T08:00:00+00:00",
+          "end": "2026-08-07T20:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-007",
+      "owner": "jake",
+      "name": "jake-finetune-v2",
+      "type": "g6e.12xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-09-04T08:00:00+00:00",
+      "state": "stopped",
+      "sessions": [
+        {
+          "start": "2026-09-04T08:00:00+00:00",
+          "end": "2026-09-05T22:00:00+00:00"
+        },
+        {
+          "start": "2026-09-06T22:00:00+00:00",
+          "end": "2026-09-08T12:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-008",
+      "owner": "jake",
+      "name": "jake-multi-gpu-eval",
+      "type": "g6e.12xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-09-16T00:00:00+00:00",
+      "state": "running",
+      "sessions": [
+        {
+          "start": "2026-09-16T00:00:00+00:00",
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-009",
+      "owner": "dgkim",
+      "name": "dgkim-embedding-baseline",
+      "type": "g6e.2xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-07-05T08:00:00+00:00",
+      "state": "terminated",
+      "sessions": [
+        {
+          "start": "2026-07-05T08:00:00+00:00",
+          "end": "2026-07-08T08:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-010",
+      "owner": "dgkim",
+      "name": "dgkim-retrieval-eval",
+      "type": "g6e.2xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-08-05T08:00:00+00:00",
+      "state": "terminated",
+      "sessions": [
+        {
+          "start": "2026-08-05T08:00:00+00:00",
+          "end": "2026-08-09T08:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-011",
+      "owner": "dgkim",
+      "name": "dgkim-rag-ablation",
+      "type": "g6e.2xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-09-05T08:00:00+00:00",
+      "state": "stopped",
+      "sessions": [
+        {
+          "start": "2026-09-05T08:00:00+00:00",
+          "end": "2026-09-07T04:00:00+00:00"
+        },
+        {
+          "start": "2026-09-08T04:00:00+00:00",
+          "end": "2026-09-10T00:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "demo-ec2-012",
+      "owner": "dgkim",
+      "name": "dgkim-inference-serving",
+      "type": "g6e.2xlarge",
+      "region": "us-east-1",
+      "created_at": "2026-09-16T12:00:00+00:00",
+      "state": "running",
+      "sessions": [
+        {
+          "start": "2026-09-16T12:00:00+00:00",
+          "end": null
+        }
+      ]
+    }
+  ],
+  "price_basis": "Fictional USD hourly rates, not AWS prices; EC2 compute only."
+}
