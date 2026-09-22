@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T00:04:32.904524+00:00",
+  "generated_at": "2026-09-22T04:50:32.718588+00:00",
   "providers": {
     "aws": {
       "cost_basis": "UnblendedCost: CUR 청구월 기준, 세금·크레딧 포함. 파트너 최종 청구액과 다를 수 있음.",
@@ -9,7 +9,7 @@
           "scope": "cost"
         }
       ],
-      "generated_at": "2026-09-22T00:04:32.904524+00:00",
+      "generated_at": "2026-09-22T04:50:32.718588+00:00",
       "history_note": "CloudTrail API 요청 기록과 관측 상태. 실제 상태 전환 시각·전체 과거 이력을 보장하지 않음.",
       "instances": [],
       "label": "AWS",
@@ -25,7 +25,7 @@
     "gpu-first": {
       "cost_enabled": false,
       "errors": [],
-      "generated_at": "2026-09-22T00:04:32.904524+00:00",
+      "generated_at": "2026-09-22T04:50:32.718588+00:00",
       "history_note": "등록된 사용자의 VESSL run 이력. running 상태 시간만 합산하며 대기 시간은 제외합니다.",
       "instances": [
         {
@@ -72,7 +72,7 @@
           "gpu_count": 2,
           "gpu_type": "NVIDIA-A100-SXM4-40GB",
           "id": "369367259595",
-          "last_seen": "2026-09-22T00:04:32.904524+00:00",
+          "last_seen": "2026-09-22T04:50:32.718588+00:00",
           "name": "informal-shopping-run",
           "owner": "jhkim00",
           "project": "prefix-research",
@@ -109,7 +109,7 @@
           "gpu_count": 4,
           "gpu_type": "NVIDIA-A100-SXM4-40GB",
           "id": "369367259906",
-          "last_seen": "2026-09-22T00:04:32.904524+00:00",
+          "last_seen": "2026-09-22T04:50:32.718588+00:00",
           "name": "a100-4-20260910-003156",
           "owner": "jhkim00",
           "project": "prefix-research",
